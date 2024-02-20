@@ -40,3 +40,30 @@ Model-View-ViewModel (MVVM): Dalam arsitektur MVVM, view model berfungsi sebagai
 
 Dalam kesimpulannya, perbedaan antara controller dan view model pada arsitektur MVC dan MVVM terletak pada fungsinya. Controller pada arsitektur MVC berperan untuk mengendalikan aliran data antara model dan view, sementara view model pada arsitektur MVVM berperan sebagai perantara antara model dan view.
 
+Tugas 3
+
+Apa perbedaan antara form POST dan form GET dalam Django?
+post: Corresponds to the HTTP POST method ; form data are included in the body of the form and sent to the server.
+get: Corresponds to the HTTP GET method; form data are appended to the action attribute URI with a '?' as separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+
+Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+Sintaks JSON menggunakan sintaks object di JS, sedangkan XML menggunakan ketentuan XML seperti menggunakan tag (<>) dll, dan HTML juga menggunakan tag seperti XML tetapi data HTML bertujuan untuk menunjukkan struktur page tersebut.
+
+Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+Karena sintaksnya mudah dipahami oleh mesin.
+
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+1. Buat berkas forms.py dan tentukan model yang akan digunakan untuk form serta field-fieldnya.
+2. Buat fungsi di views untuk render HTML yang akan dipanggil saat mengakses url-nya ataupun saat menekan tombol add new todo
+3. Tambahkan kode untuk menampilkan todo-todo yang ada (di fungsi show_main)
+4. Hubungkan url untuk menambahkan todo dengan methodnya
+5. Buat HTML untuk page menambahkan todo
+6. Tambahkan kode di main.html untuk membuat button menuju page menambahkan todo dan kode untuk menampilkan todo yang sudah ada sebagai tabel
+7. Buat fungsi-fungsi untuk translate objek model menjadi format XML dan JSON dengan menggunakan serializers
+8. Tambahkan path url ke dalam urlpatterns untuk fungsi-fungsi tadi
+
+![Screenshot](images/xml.png)
+![Screenshot](images/json.png)
+![Screenshot](images/xml-with-id.png)
+![Screenshot](images/json-with-id.png)

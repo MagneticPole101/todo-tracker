@@ -1,7 +1,32 @@
+{% extends 'base.html' %} {% block content %}
 <h1>Todo Tracker Page</h1>
 
 <h5>Name:</h5>
-<p>{{ name }}</p>
-<p></p>
+<p>{{name}}</p>
+
 <h5>Class:</h5>
-<p>{{ class }}</p>
+<p>{{class}}</p>
+
+<table>
+    <tr>
+      <th>Name</th>
+      <th>Deadline</th>
+      <th>Description</th>
+    </tr>
+  
+    {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini
+    {%endcomment %} {% for todo in todos %}
+    <tr>
+      <td>{{todo.name}}</td>
+      <td>{{todo.deadline}}</td>
+      <td>{{todo.description}}</td>
+    </tr>
+    {% endfor %}
+</table>
+  
+<br />
+
+<a href="{% url 'main:create_todo' %}">
+  <button>Add New Todo</button>
+</a>
+{% endblock content %}
