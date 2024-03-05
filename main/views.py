@@ -30,13 +30,36 @@ def create_todo(request):
     form = TodoForm(request.POST or None)
 
     if form.is_valid() and request.method == "POST":
-        book = form.save(commit=False)
-        book.user = request.user
-        book.save()
+        todo = form.save(commit=False)
+        todo.user = request.user
+        todo.save()
         return redirect('main:show_main')
 
     context = {'form': form}
     return render(request, "create_todo.html", context)
+
+def edit_todo(request, id):
+    # Get todo berdasarkan ID
+    todo = Todo.objects.get(pk = id)
+
+    # Set todo sebagai instance dari form
+    form = TodoForm(request.POST or None, instance=todo)
+
+    if form.is_valid() and request.method == "POST":
+        # Simpan form dan kembali ke halaman awal
+        form.save()
+        return HttpResponseRedirect(reverse('main:show_main'))
+
+    context = {'form': form}
+    return render(request, "edit_todo.html", context)
+
+def delete_todo(request, id):
+    # Get data berdasarkan ID
+    todo = Todo.objects.get(pk = id)
+    # Hapus data
+    todo.delete()
+    # Kembali ke halaman awal
+    return HttpResponseRedirect(reverse('main:show_main'))
 
 def show_xml(request):
     data = Todo.objects.all()

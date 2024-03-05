@@ -96,3 +96,31 @@ Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-b
 
 4. Tambahkan cookie last_login dengan menggunakan method set_cookie di fungsi login_user, tambahkan data cookie untuk ditampilkan di main.html pada variabel context di fungsi show_main, hapus cookie saat user logout dengan menggunakan method delete_cookie (di fungsi logout_user), dan terakhir tambahkan elemen header untuk menampilkan data last_login di main.html.
 
+TUGAS 5
+
+Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+
+Element Selector memungkinkan kita mengubah properti untuk semua elemen yang memiliki tag HTML yang sama. Salah satu contoh penggunaannya adalah membuat semua elemen p dan header
+memakai font yang sama.
+
+Jelaskan HTML5 Tag yang kamu ketahui.
+
+<a></a> anchor tag, tag untuk membuat link
+<ol></ol> ordered list tag, membuat sebuah list dengan urutan
+<table></table> table tag, tag untuk membuat table
+<tr></tr> table row tag, tag untuk membuat sebuah baris dalam tabel
+<th></th> table header tag, tag untuk membuat sebuah kolom dalam table yang merupakan header/judul tabel
+<td></td> table data tag, tag untuk membuat sebuah kolom dalam table yang bukan header
+
+Jelaskan perbedaan antara margin dan padding.
+
+Margin memberi jarak antara box model suatu elemen dengan elemen lainnya, sedangkan padding membuat kotak content dari suatu elemen menjadi lebih kecil.
+
+Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+
+Tailwind |Bootstrap
+-|-
+Tailwind CSS membangun tampilan dengan menggabungkan kelas-kelas utilitas yang telah didefinisikan sebelumnya.|Bootstrap menggunakan gaya dan komponen yang telah didefinisikan, yang memiliki tampilan yang sudah jadi dan dapat digunakan secara langsung.
+Tailwind CSS memiliki file CSS yang lebih kecil sedikit dibandingkan Bootstrap dan hanya akan memuat kelas-kelas utilitas yang ada.|Bootstrap memiliki file CSS yang lebih besar dibandingkan dengan Tailwind CSS karena termasuk banyak komponen yang telah didefinisikan.
+Tailwind CSS memiliki memberikan fleksibilitas dan adaptabilitas tinggi terhadap proyek.|Bootstrap sering kali menghasilkan tampilan yang lebih konsisten di seluruh proyek karena menggunakan komponen yang telah didefinisikan.
+Tailwind CSS memiliki pembelajaran yang lebih curam karena memerlukan pemahaman terhadap kelas-kelas utilitas yang tersedia dan bagaimana menggabungkannya untuk mencapai tampilan yang diinginkan.|Bootstrap memiliki pembelajaran yang lebih cepat untuk pemula karena dapat mulai dengan komponen yang telah didefinisikan.
